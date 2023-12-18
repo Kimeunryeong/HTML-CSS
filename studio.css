@@ -1,0 +1,198 @@
+/* ----------초기화 */
+* {margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cabin', sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ---------헤더---------- */
+#nav {
+  background-color: #eee;
+  /* 가로정렬 설명은 28 */
+  display: flex;
+  /*사이 공간 벌려주기*/
+  justify-content: space-around;
+  /*내용 높이 중앙정렬*/
+  align-items: center;
+}
+    .gnb {
+      display: flex;
+      font-size: 18px;
+    }
+    /*div와 ul을 동일선상에 두기 위해 div의 부모인 nav에 flex 태그 적용
+    li는 여전히 세로로 되어 있기때문에 부모인 ul태그에도 flex태그 입력*/
+.title1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+.gnb a, #nav a {
+  margin: 0px 10px;
+  padding: 0px 5px;
+  color: black;
+}
+#nav a:hover {
+  color: #919496;
+}
+
+/* ----------main section1 */
+main {
+  background: url('image/white2.jpg') fixed; /* 스크롤시 배경 고정되게*/
+}
+#main_part1 {
+  height: 100vh;
+}
+.carousel-item img {
+  height: 800px;
+}
+/* ----------main section2 */
+#main_part2 {
+  width:100%;
+}
+.title2 {
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 150px;
+  font-weight: bold;
+}
+.review_gallery {
+  display: flex;
+  height: 600px;
+}
+.review_gallery2 {
+  display: flex;
+  justify-content: flex-end;
+}
+.review_gallery img{
+  width: 300px;
+  margin: 50px 10px;
+  overflow: hidden;
+  transition: transform 0.2s linear;
+}
+
+.review_gallery img:hover {
+/* 이미지 호버시 1.1배로 커짐 */
+  transform: scale(1.05);}
+.text {
+  align-items: center; /*수평 중앙 정렬 */
+  justify-content: center;  /* 수직 중앙 정렬 */
+  width: 1000px;
+  height: 600px;
+  margin: 300px auto;
+  font-size: 24px;
+  text-align: center; /* 텍스트를 가운데 정렬 */  
+}
+
+/* ----------바닥 */
+footer {
+  height: 400px;
+  background-color: #ddd;
+  display: flex;
+  /* 컨테이너 가운데 배치 */
+  justify-content:center
+}
+.footer-menu {
+  max-width: 1200px;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  color: #919496;
+}
+
+.first-box {
+  /* 6:4비율 나누기위해 */
+  width: 60%;
+  display: flex;
+  /* 공간내 끝에서 끝으로 두기 */
+  justify-content: space-between;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+.footer-title {
+  color: #aaa;
+  font-size: 18px;
+  font-weight: 900;
+  margin: 20px 0px;
+}
+.footer-menu-item {
+  padding-bottom: 15px;
+  padding-top: 3px;
+  font-size: 16px;
+}
+.column a {
+  color: #aaa;
+}
+.column a:hover {
+  color:#919496;
+  font-weight: 500;
+}
+/* ----------세컨박스 우측 아이콘 */
+.second-box {
+  width: 40%;
+  display: flex;
+  /* 우측 젤 끝에 두기 */
+  justify-content: flex-end;
+}
+.icon-box {
+  width: 54px;
+  height: 54px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  font-size: 24px;
+}
+.icon:hover {
+  color: white;
+}
+/* 두박스 옆으로 배열하기위해 추가 */
+.footer-menu {
+  display:flex;
+  justify-content: space-between;
+  height: 346px;
+}
+/* 모달 스타일 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 50px;
+  overflow: auto;
+}
+
+/* 모달 이미지 스타일 */
+.modal-content {
+  margin: auto;
+  width: auto;
+  height: 100%;
+  max-width: 80vh;
+}
+
+/* 모달 닫기 버튼 스타일 */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 35px;
+  color: #f1f1f1;
+  cursor: pointer;
+}
