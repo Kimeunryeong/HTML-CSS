@@ -1,0 +1,50 @@
+/* 기본 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* background-color: ; */
+  
+}
+
+/* 첫 번째 섹션 스타일 */
+#first-back {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.back-ground {
+  background: url('image/white1.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw; /* 변경 */
+  z-index: -1;
+}
+
+/* 토글 및 드롭다운 메뉴 스타일 */
+
+
+/* 메인 화면 스타일 */
+.main_title > * {
+  margin: 0;
+  text-align: center;
+}
+
+.main_title h1 {
+  font-size: 12vw;
+}
+
+/* 하단 부 이미지 */
