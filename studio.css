@@ -17,22 +17,24 @@ a {
   background-color: #eee;
   /* 가로정렬 설명은 28 */
   display: flex;
-  /*사이 공간 벌려주기*/
-  justify-content: space-around;
   /*내용 높이 중앙정렬*/
   align-items: center;
 }
-    .gnb {
-      display: flex;
-      font-size: 18px;
-    }
+#nav ul {
+  display: flex;
+  flex-grow: 1;
+  right: 0px;
+  font-size: 18px;
+  justify-content: flex-end;
+}
     /*div와 ul을 동일선상에 두기 위해 div의 부모인 nav에 flex 태그 적용
     li는 여전히 세로로 되어 있기때문에 부모인 ul태그에도 flex태그 입력*/
 .title1 {
   font-size: 50px;
   font-weight: bold;
+  margin-left: 35px;
 }
-.gnb a, #nav a {
+#gnb a, #nav a {
   margin: 0px 10px;
   padding: 0px 5px;
   color: black;
@@ -43,13 +45,15 @@ a {
 
 /* ----------main section1 */
 main {
-  background: url('image/white2.jpg') fixed; /* 스크롤시 배경 고정되게*/
+  background: #eee;
 }
 #main_part1 {
   height: 100vh;
 }
 .carousel-item img {
-  height: 800px;
+  height: 100vh;
+  max-width: 100%;
+  width: 90vw;
 }
 /* ----------main section2 */
 #main_part2 {
@@ -80,15 +84,14 @@ main {
 /* 이미지 호버시 1.1배로 커짐 */
   transform: scale(1.05);}
 .text {
-  align-items: center; /*수평 중앙 정렬 */
-  justify-content: center;  /* 수직 중앙 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: center; /* 수직 중앙 정렬 */
   width: 1000px;
   height: 600px;
   margin: 300px auto;
-  font-size: 24px;
-  text-align: center; /* 텍스트를 가운데 정렬 */  
+  font-size: 25px;
+  text-align: center; /* 텍스트를 가운데 정렬 */
 }
-
 /* ----------바닥 */
 footer {
   height: 400px;
@@ -169,22 +172,23 @@ footer {
   display: none;
   position: fixed;
   z-index: 1;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.8);
   padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 /* 모달 이미지 스타일 */
 .modal-content {
   margin: auto;
-  width: auto;
+  display: block;
+  width: 70%;
   height: 100%;
-  max-width: 80vh;
+  max-width: 700px;
 }
 
 /* 모달 닫기 버튼 스타일 */

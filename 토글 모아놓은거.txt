@@ -1,0 +1,77 @@
+아무거나 :root {
+  --btn-width: 10vw;
+  --btn-min-width: 1vw; /* 10% of viewport width */
+  --btn-height: 2vh;
+  --btn-min-height: 15px;
+  --menu-height: calc(var(--btn-height) * 7);
+  --menu-min-height: calc(var(--btn-min-height) * 2);
+  --border-rad: 0.5vw; /* 5% of viewport width */
+  --font-size: 2vw;
+}
+
+
+#container {
+  margin-top: 2vh;
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  z-index: 999;
+}
+
+#label, #arrow, #menu {
+  width: var(--btn-width);
+  min-width: var(--btn-min-width);
+}
+
+#label {
+  height: var(--btn-height);
+  min-height: var(--btn-min-height);
+  background-color: rgba(221, 221, 221, 0.1);
+  border-radius: var(--border-rad);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#arrow {
+  height: calc(var(--btn-height) * 0.4);
+  border-radius: 100%;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+#menu {
+  height: 0;
+  background-color: #ddd 0.1;
+  border-radius: var(--border-rad);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: calc(var(--btn-height) + 3vh);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+#toggle:checked ~ #menu {
+  height: var(--menu-height);
+  min-height: var(--menu-min-height);
+  opacity: 1;
+}
+
+#toggle:checked ~ #label > #arrow {
+  transform: rotate(180deg);
+}
+
+.menu-name {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: var(--font-size);
+  font-weight: 900;
+  line-height: 20px;
+  width: 100%;
+}
